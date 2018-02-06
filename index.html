@@ -5,5 +5,17 @@
   </head>
   <body>
     <h2>mefesto.io</h2>
+    <ul id="test"></ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+     function init() {
+	 var ul = document.getElementById('test');
+	 axios.get('http://data.mefesto.io/test.json').then(function(res) {
+	     console.log('res: ', res);
+	 });
+     }
+
+     window.onload = init;
+    </script>
   </body>
 </html>
