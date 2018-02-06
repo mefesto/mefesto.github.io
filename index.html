@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
      function init() {
+	 // configure axios
+	 axios.defaults.crossDomain = true;
+	 
 	 var ul = document.getElementById('test');
 	 axios.get('http://data.mefesto.io/test.json').then(function(res) {
 	     console.log('res: ', res);
